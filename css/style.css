@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 main{margin-top: 3em;}
 
-html { color-scheme: light dark; }
+/*html { color-scheme: light dark; }*/
   
 body { margin: 3rem; font-size: 2rem; font-family: system-ui; text-align: center; }
   
@@ -46,4 +46,72 @@ body { margin: 3rem; font-size: 2rem; font-family: system-ui; text-align: center
 }  
 .wrapper:hover .inner {
     max-height: 100%;
+}
+/* C WRAPPER */
+
+.c-wrapper {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    background: hsla(101, 50%, 50%, 0.4);
+    border-radius: 0.5rem;
+    transition: max-height 0.5s ease-out;
+}
+.c-wrapper span{
+    transition: transform .3s;
+    height: 1.5em;
+}
+.c-wrapper:hover span{
+    color:red;
+    transform: rotate(180deg);
+}
+.c-inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}  
+.c-wrapper:hover .c-inner {
+    max-height: 100%;
+}
+
+/*quick example*/
+
+.c-quick-example {
+    margin: 1rem;
+    padding: 1rem;
+    background: hsla(290, 50%, 50%, 0.4);
+    border-radius: 0.5rem;  
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    text-align: start;
+}
+
+.c-quick-example > div {
+    overflow: hidden;
+    /*transition: all 0.5s;*/
+    transition: ease-in-out 0.5s;
+}  
+.c-quick-example:hover{
+    grid-template-rows: 1fr;
+}
+.c-quick-example:hover > div{
+    margin-top: 0.4em;
+}
+.c-quick-example small{
+    font-size: 0.4em;
+    font-style: italic;
+} 
+.c-quick-example span {
+    position: absolute;
+    font-size: 0.7em;
+    margin-left: 0.4em; margin-right: 0.4em;
+    right: 0;
+    transition: transform .3s;
+}
+.c-quick-example:hover span{
+    transform: rotate(180deg);
+}
+.c-quick-example:hover small::after{
+    content: 'focus out to close';
 }
