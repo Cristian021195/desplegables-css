@@ -3,7 +3,7 @@ main{margin-top: 3em;}
 
 /*html { color-scheme: light dark; }*/
   
-body { margin: 3rem; font-size: 2rem; font-family: system-ui; text-align: center; }
+body {font-family: system-ui; text-align: center; }
   
 .quick-example {
     margin: 1rem;
@@ -47,32 +47,6 @@ body { margin: 3rem; font-size: 2rem; font-family: system-ui; text-align: center
 .wrapper:hover .inner {
     max-height: 100%;
 }
-/* C WRAPPER */
-
-.c-wrapper {
-    display: flex;
-    margin: 1rem;
-    padding: 1rem;
-    background: hsla(101, 50%, 50%, 0.4);
-    border-radius: 0.5rem;
-    transition: max-height 0.5s ease-out;
-}
-.c-wrapper span{
-    transition: transform .3s;
-    height: 1.5em;
-}
-.c-wrapper:hover span{
-    color:red;
-    transform: rotate(180deg);
-}
-.c-inner {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}  
-.c-wrapper:hover .c-inner {
-    max-height: 100%;
-}
 
 /*quick example*/
 
@@ -114,4 +88,147 @@ body { margin: 3rem; font-size: 2rem; font-family: system-ui; text-align: center
 }
 .c-quick-example:hover small::after{
     content: 'focus out to close';
+}
+
+
+/* NEW */
+
+
+.h-fold {
+    margin: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    text-align: start;
+    position: relative;
+}
+
+.h-fold > div {
+    overflow: hidden;
+}  
+.h-fold:hover{
+    grid-template-rows: 1fr;
+}
+.h-fold:hover .respuesta{
+    margin-top: 0.4em;
+}
+.h-fold small{
+    font-size: 0.4em;
+    font-style: italic;
+}
+.h-fold span {
+    position: absolute;
+    font-size: 0.7em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    top: 2em;
+    right: 0;
+    transition: transform .3s;
+}
+
+.h-fold:hover span{
+    transform: rotate(180deg);
+}
+.h-fold:hover small::after{
+    content: 'focus out to close';
+}
+
+.i-shadow {
+    border-radius: .2em;
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,.15),-3px -3px 4px 0 hsla(0,0%,100%,.3);
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+}
+
+/* NEW 2*/
+
+.h-fold-2 {
+    margin: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    text-align: start;
+}
+
+.h-fold-2 > div {
+    overflow: hidden;
+}  
+.h-fold-2:hover{
+    grid-template-rows: 1fr;
+}
+.h-fold-2:hover .respuesta{
+    margin-top: 0.4em;
+}
+.h-fold-2 small{
+    font-size: 0.4em;
+    font-style: italic;
+}
+.h-fold-2 span {
+    position: absolute;
+    font-size: 0.7em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    right: 0;
+    transition: transform .3s;
+    bottom: 2em;
+    margin-bottom: -0.5em;
+}
+
+.h-fold-2:hover span{
+    transform: rotate(180deg);
+    margin-bottom: 0em;
+}
+.h-fold-2:hover small::after{
+    content: 'focus out to close';
+}
+
+
+/* NEW */
+
+
+.h-fold-3 {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+}
+.hfold{
+    position: relative;
+    text-align: start;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.h-fold-3 > div {
+    overflow: hidden;
+}  
+.hfold:hover .h-fold-3{
+    grid-template-rows: 1fr;
+}
+.hfold small{
+    font-size: 0.4em;
+    font-style: italic;
+}
+.hfold span {
+    position: absolute;
+    font-size: 0.7em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    top: 2em;
+    right: 0;
+    transition: transform .3s;
+}
+.hfold:hover span{
+    transform: rotate(180deg);
+}
+.hfold:hover small::after{
+    content: 'focus out to close';
+}
+
+.i-shadow {
+    border-radius: .2em;
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,.15),-3px -3px 4px 0 hsla(0,0%,100%,.3);
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
 }
